@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #cccccc;
+    font-family: arial;
+    padding: 0 25%;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-direction: column;
+    color: #777;
+}
+
+p {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.anim-zone {
+    background-color: #fff;
+    border-radius: 6px;    
+    position: relative;    
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.ball {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    opacity: 0.2;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    font-size: 0.5em;
+}
+
+#zone2 .ball {
+    width: 60px;
+    height: 60px;
+}
+

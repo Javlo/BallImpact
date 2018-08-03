@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<link href='style.css' rel='stylesheet' type='text/css' />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="anim.js" type="text/javascript"></script>
+<title>javascript: animation with management of the impact between a group of balls</title>
+<meta name="description" content="JavaScript that allows to add ball animations in any container, javascript handles the impacts between the balls and on the edges." />
+<body>
+<h1>Ball impact javascript animation v 1.0</h1>
+<div class="anim-zone" id="zone1"><img src="girl.jpg" alt="girl" /></div>
+<div class="anim-zone" id="zone2"><img src="girl2.jpg" alt="girl" /></div>
+<p><strong>usage:</strong><br /> new BallAnimation(<i>SELECTOR TO CONTAINER, #BALLS, INTERVAL BETWEEN ANIMATION, SPEED (pixel/interval)</i>);</p>
+<script>
+	window.addEventListener("load", function(event) {     
+		var balAnimation1 = new BallAnimation("#zone1", 6, 20, 1);
+		var balAnimation2 = new BallAnimation("#zone2", 12, 10, 1);
+	});
+</script>
+</body>
+</html>
