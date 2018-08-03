@@ -2,10 +2,6 @@
 BallAnimation.js
 ================
 
-[![Latest NPM release][npm-badge]][npm-badge-url]
-[![License][license-badge]][license-badge-url]
-[![Dependencies][dependencies-badge]][dependencies-badge-url]
-
 JavaScript that allows to add ball animations in any container, javascript handles the impacts between the balls and on the edges.
 
 ## Getting Started
