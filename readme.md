@@ -1,5 +1,6 @@
 
-# BallAnimation
+BallAnimation.js
+================
 
 [![Latest NPM release][npm-badge]][npm-badge-url]
 [![License][license-badge]][license-badge-url]
@@ -12,20 +13,20 @@ JavaScript that allows to add ball animations in any container, javascript handl
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 include : 
---
-<script src="anim.js" type="text/javascript"></script>
+```
+<script src="BallAnimation.js" type="text/javascript"></script>
 <link href='style.css' rel='stylesheet' type='text/css' />
---
+```
 
 init sample :
---
+```
 <script>
 	window.addEventListener("load", function(event) {     
 		var balAnimation1 = new BallAnimation("#zone1", 6, 20, 1);
 		var balAnimation2 = new BallAnimation("#zone2", 12, 10, 1);
 	});
 </script>
---
+```
 
 ### Prerequisites
 
