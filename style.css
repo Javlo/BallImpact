@@ -22,7 +22,6 @@ p {
 .anim-zone {
     background-color: #fff;
     border-radius: 6px;    
-    position: relative;    
     width: 100%;
     overflow: hidden;
     margin-bottom: 15px;

@@ -12,8 +12,8 @@
 <p><strong>usage:</strong><br /> new BallAnimation(<i>SELECTOR TO CONTAINER, #BALLS, INTERVAL BETWEEN ANIMATION, SPEED (pixel/interval)</i>);</p>
 <script>
 	window.addEventListener("load", function(event) {     
-		var balAnimation1 = new BallAnimation("#zone1", 6, 20, 1);
-		var balAnimation2 = new BallAnimation("#zone2", 12, 10, 1);
+		var balAnimation = BallAnimation.createAllAnimation(".anim-zone", 6, 20, 1);	
+		balAnimation[1].addBall(5);
 	});
 </script>
 </body>

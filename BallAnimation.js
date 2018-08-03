@@ -4,29 +4,57 @@
  */
 class BallAnimation {
 
-    constructor(containerCssSelector, countBall, interval, speed) {
+    static createAllAnimation(containerCssSelector, countBall, interval, speed) {
+        var instances = new Array();
+        var containers = document.querySelectorAll(containerCssSelector);
+        for (var i=0; i<containers.length; i++) {
+            instances[i] = new BallAnimation(containers[i], countBall, interval, speed);
+        }
+        return instances;
+    }
+
+    constructor(containerCssSelector, countBall, interval, speed) {            
+        if (typeof containerCssSelector == "string") {
+            this.container = document.querySelector(containerCssSelector);
+        } else {
+            this.container = containerCssSelector;
+        }        
+        this.container.style.position="relative";        
         var ballHTML = "";    
         for (var i=0; i<countBall; i++) {
-            ballHTML += '<div class="ball anim" id="ball'+i+'"></div>';
+            ballHTML += '<div class="ball anim ball'+i+'"></div>';
+        }        
+        this.container.innerHTML = this.container.innerHTML+ballHTML;
+        this.items=this.container.querySelectorAll(".anim");
+        for (i=0; i<this.items.length; i++) {
+            var item = this.items[i];
+            item.index = i;
+            item.style.top = Math.floor((Math.random() * (this.container.offsetHeight-item.offsetHeight)))+"px";
+            item.style.left = Math.floor((Math.random() * (this.container.offsetWidth-item.offsetWidth)))+"px";       
         }
-        var container = document.querySelector(containerCssSelector);
-        container.innerHTML = container.innerHTML+ballHTML;
-        this.items=document.querySelectorAll(containerCssSelector+" .anim");
-        this.items.forEach(function(item, index) {
-            item.index = index;
-            item.style.top = Math.floor((Math.random() * (container.offsetHeight-item.offsetHeight)))+"px";
-            item.style.left = Math.floor((Math.random() * (container.offsetWidth-item.offsetWidth)))+"px";       
-        });
         this.items.forEach(function(item) {
             item.vx = speed;
             item.vy = speed;                        
         });
         /** remove overlaps **/
-        for (i=0; i<container.offsetWidth/2; i++) {
+        for (i=0; i<this.container.offsetWidth/2; i++) {
             this.anim();
         }
         var t = this;
         setInterval(function(){t.anim();}, interval);
+    }
+
+    addBall(speed) {        
+        var i = this.container.querySelectorAll(".ball").length+1;
+        var newBall = document.createElement('div');
+        newBall.classList.add("ball");
+        newBall.classList.add("anim");
+        newBall.classList.add("ball"+i);
+        newBall.vx=speed;
+        newBall.vy=speed; 
+        newBall.index=i; 
+        this.container.appendChild(newBall);        
+        this.items=this.container.querySelectorAll(".anim");       
     }
 
     anim() {
