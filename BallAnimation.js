@@ -30,7 +30,6 @@ class BallAnimation {
     }
 
     anim() {
-        console.log(this);
         for (var i=0; i<this.items.length; i++) {
             var item = this.items[i];
             var rect = item.getBoundingClientRect();
@@ -44,7 +43,6 @@ class BallAnimation {
             if (!this.contactBorder(item)) {
                 this.contactBalls(item);
             }
-            //this.info(item);
         }
     }
 
@@ -127,9 +125,5 @@ class BallAnimation {
                 } 
             }
         }
-    }
-
-    info(item) {
-        // item.innerHTML = '<span class="text">'+item.vx+','+item.vy+'</span>';
     }
 }

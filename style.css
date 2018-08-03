@@ -50,6 +50,7 @@ img {
 
 #zone2 .ball {
     width: 60px;
-    height: 60px;
+    height: 60px;    
+    background-color: #000000;
 }
 
