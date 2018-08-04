@@ -1,5 +1,5 @@
 
-BallAnimation.js
+ballimpact.js
 ================
 
 JavaScript that allows to add ball animations in any container, javascript handles the impacts between the balls and on the edges.
