@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 include : 
 ```
-<script src="ballimpact" type="text/javascript"></script>
+<script src="ballimpact.js" type="text/javascript"></script>
 <link href='style.css' rel='stylesheet' type='text/css' />
 ```
 
