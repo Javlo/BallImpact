@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 include : 
 ```
-<script src="BallAnimation.js" type="text/javascript"></script>
+<script src="ballanimation.js" type="text/javascript"></script>
 <link href='style.css' rel='stylesheet' type='text/css' />
 ```
 
@@ -24,13 +24,15 @@ init sample :
 </script>
 ```
 
+- [online demo](https://www.javlo.org/resource/static/github/ballimpact/index.html)
+
 ### Prerequisites
 
 nothing
 
 ## Versioning
 
-1.0
+1.1
 
 ## Authors
 

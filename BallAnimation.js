@@ -1,5 +1,5 @@
 /**
- * BallAnimation v1.0
+ * BallAnimation v1.1
  * author : Patrick Vandermaesen
  */
 class BallAnimation {
